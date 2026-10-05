@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>net.lilguy.eyes-simulator</string>
+	<key>CFBundleName</key>
+	<string>LilGuy Eyes simulator</string>
+	<key>NSCameraUsageDescription</key>
+	<string>The simulator's fake CameraService uses the webcam as the stand-in for the device's cameras.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Push-to-talk voice input for the simulator's agent conversation loop.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Transcribes held-key speech so the simulated device can talk to its agent harness.</string>
+</dict>
+</plist>

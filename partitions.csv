@@ -1,0 +1,12 @@
+# OTA layout for the 32 MB flash the board actually carries (OS Basic / Voice M0).
+# Grows the 16 MB layout's two 3M slots to 6M each; one manual reflash. nvs keeps
+# its offset and size, so IMU calibration, settings and the device identity
+# survive the reflash. Dual app slots enable esp_ota with rollback; storage is
+# littlefs-formatted space for fonts, faces and assets (the remaining 19.9 MB).
+# Name,   Type, SubType, Offset,   Size,      Flags
+nvs,      data, nvs,     0x9000,   24K,
+otadata,  data, ota,     0xf000,   8K,
+phy_init, data, phy,     0x11000,  4K,
+ota_0,    app,  ota_0,   0x20000,  6M,
+ota_1,    app,  ota_1,   0x620000, 6M,
+storage,  data, spiffs,  0xC20000, 0x13E0000,

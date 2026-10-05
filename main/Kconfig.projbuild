@@ -1,0 +1,34 @@
+menu "LilGuy Eyes"
+
+config LILGUY_FRAME_RATE
+    int "Target frame rate"
+    range 20 60
+    default 60
+    help
+        Procedural animation frame rate. 60 fps matches the client render loop.
+
+config LILGUY_ROUND_VIEWPORT
+    bool "Mask rendering to a circular viewport"
+    default y
+    help
+        Keeps the visual composition compatible with round Lil Guy displays.
+        The physical Waveshare panel is square with rounded corners.
+
+config LILGUY_SHOW_SELECTION_OVERLAY
+    bool "Show the selected look after a swipe"
+    default y
+
+config LILGUY_IMU_AUTOCALIBRATE
+    bool "Auto-calibrate tilt neutral on first boot"
+    default y
+
+config LILGUY_WORLD_VIEW
+    bool "World-view browse carousel (hex palette grid)"
+    default n
+    help
+        Compiles in the drag-to-browse infinite hex palette grid (fisheye
+        world view with fling/settle selection). Off: drags are pure gaze
+        follow, grid_visibility stays 0, and the grid renderer/cache code
+        is removed from the binary. Host builds keep it on (Makefile).
+
+endmenu
