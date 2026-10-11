@@ -1,4 +1,4 @@
-# LilGuy Eyes for Waveshare AMOLED 1.75C
+# botOS for Waveshare AMOLED 1.75C
 
 A real ESP-IDF firmware project for the **Waveshare ESP32-S3-Touch-AMOLED-1.75C**. It starts on the public Creature **circle-siren** look and supports swipe browsing, live gaze, organic blinks, calm tilt tracking, and shake reactions.
 
